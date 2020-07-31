@@ -2,12 +2,27 @@ CREATE DATABASE crud;
 
 use crud;
 
-CREATE TABLE task(
-  id INT(11) PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  img_dir longblob NOT NULL
-);
+CREATE TABLE `actas` (
+  `id` int(11) NOT NULL,
+  `acta` bigint(30) NOT NULL,
+  `actaComp` bigint(30) NOT NULL,
+  `lugar` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `hora` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `rubro` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `apellido` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `dni` int(8) NOT NULL,
+  `domicilio` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `medidaCautelar` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `dispoLegal` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `objetos` varchar(511) COLLATE utf8_unicode_ci NOT NULL,
+  `inspector` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `legajo` int(25) NOT NULL,
+  `observaciones` varchar(511) COLLATE utf8_unicode_ci NOT NULL,
+  `estado` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `img_dir` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+)
 
-DESCRIBE task;
+DESCRIBE actas;
