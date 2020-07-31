@@ -19,7 +19,7 @@ CREATE TABLE `actas` (
   `dispoLegal` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `objetos` varchar(511) COLLATE utf8_unicode_ci NOT NULL,
   `inspector` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `legajo` int(25) NOT NULL,
+  `legajo` bigint(25) NOT NULL,
   `observaciones` varchar(511) COLLATE utf8_unicode_ci NOT NULL,
   `estado` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `img_dir` varchar(255) COLLATE utf8_unicode_ci NOT NULL
