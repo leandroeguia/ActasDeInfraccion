@@ -3,6 +3,7 @@
 <?php include('includes/header.php'); ?>
 
 <main class="container p-5">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <h2>Acta de infraccion - Ficha completa</h2> 
 <br>
 <br>
@@ -71,12 +72,12 @@
             <th>Domicilio</th>
             <th>Medida Cautelar</th>
             <th>Disposicion Legal</th>
-            <th>Objetos</th>
+           
             <th>Inspector</th>
             <th>Legajo</th>
-            <th>Observaciones</th>
+
             <th>Estado</th>
-            <th>Acciones</th>
+            
           </tr>
         </thead>
 
@@ -94,11 +95,44 @@
             <td><?php echo $row['domicilio']; ?></td>
             <td><?php echo $row['medidaCautelar']; ?></td>
             <td><?php echo $row['dispoLegal']; ?></td>
-            <td><?php echo $row['objetos']; ?></td>
+            
             <td><?php echo $row['inspector']; ?></td>
             <td><?php echo $row['legajo']; ?></td>
-            <td><?php echo $row['observaciones']; ?></td>
+           
             <td><?php echo $row['estado']; ?></td>
+         
+          </tr>
+          <?php } ?>
+        </tbody>
+
+        
+        
+      </table>
+      
+      <br>
+      <br>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Objetos</th>
+            <th>Observaciones</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <?php
+
+          $id = $_GET['id']; 
+          $query = "SELECT * FROM actas WHERE id=$id";
+          $result_tasks = mysqli_query($conn, $query);    
+
+          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+          <tr>
+            <td><?php echo $row['objetos']; ?></td>
+            <td><?php echo $row['observaciones']; ?></td>
             <td>
               <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary" data-toggle="tooltip" title="Editar">
                 <i class="fas fa-marker"></i>

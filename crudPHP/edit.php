@@ -64,6 +64,7 @@ if (isset($_POST['update'])) {
 
 ?>
 <?php include('includes/header.php'); ?>
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <main class="container p-4">
 <head>
 <link rel="stylesheet" href="estilos.css">
@@ -77,11 +78,11 @@ if (isset($_POST['update'])) {
       <li>
             <div class="form-group">
               <label>Acta</label>
-              <input name="acta" type="text" class="form-control" value="<?php echo $acta; ?>" placeholder="Nueva acta" required> 
+              <input name="acta" type="text" class="form-control" value="<?php echo $acta; ?>" maxlength="20" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Nueva acta" required> 
             </div>
             <div class="form-group">
               <label>Acta Comprobacion</label>
-              <input name="actaComp" type="text" class="form-control" value="<?php echo $actaComp; ?>" placeholder="Nueva acta comprobacion" required> 
+              <input name="actaComp" type="text" class="form-control" value="<?php echo $actaComp; ?>"  maxlength="20" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Nueva acta comprobacion" required> 
            </div>
            <div class="form-group">
               <label>Lugar</label>
@@ -93,23 +94,23 @@ if (isset($_POST['update'])) {
             </div>
             <div class="form-group">
               <label>Hora</label>
-              <input name="hora" type="text" class="form-control" value="<?php echo $hora; ?>" placeholder="Nueva acta" required> 
+              <input name="hora" type="text" class="form-control" value="<?php echo $hora; ?>" placeholder="Nueva hora" required> 
             </div>
             <div class="form-group">
               <label>Rubro</label>
-              <input name="rubro" type="text" class="form-control" value="<?php echo $rubro; ?>" placeholder="Nueva acta" required> 
+              <input name="rubro" type="text" class="form-control" value="<?php echo $rubro; ?>" placeholder="Nuevo rubro" required> 
             </div>
             <div class="form-group">
               <label>Direccion</label>
-              <input name="direccion" type="text" class="form-control" value="<?php echo $direccion; ?>" placeholder="Nueva acta" required> 
+              <input name="direccion" type="text" class="form-control" value="<?php echo $direccion; ?>" placeholder="Nueva direccion" required> 
             </div>
             <div class="form-group">
               <label>Nombre</label>
-              <input name="nombre" type="text" class="form-control" value="<?php echo $nombre; ?>" placeholder="Nueva acta" required> 
+              <input name="nombre" type="text" class="form-control" value="<?php echo $nombre; ?>" placeholder="Nuevo nombre" required> 
             </div>
             <div class="form-group">
               <label>Apellido</label>
-              <input name="apellido" type="text" class="form-control" value="<?php echo $apellido; ?>" placeholder="Nueva acta" required> 
+              <input name="apellido" type="text" class="form-control" value="<?php echo $apellido; ?>" placeholder="Nuevo apellido" required> 
             </div>
             
         </li>
@@ -117,7 +118,7 @@ if (isset($_POST['update'])) {
         <li>
               <div class="form-group">
                 <label>DNI</label>
-                <input name="dni" type="text" class="form-control" value="<?php echo $dni; ?>" placeholder="Nuevo DNI" required> 
+                <input name="dni" type="text" class="form-control"  maxlength="8" value="<?php echo $dni; ?>" placeholder="Nuevo DNI" required> 
               </div>
               <div class="form-group">
               <label>Domicilio</label>
@@ -133,23 +134,23 @@ if (isset($_POST['update'])) {
               </div>
               <div class="form-group">
               <label>Objetos</label>
-              <input name="objetos" type="text" class="form-control" value="<?php echo $objetos; ?>" placeholder="Nueva acta" required> 
+              <input name="objetos" type="text" class="form-control" value="<?php echo $objetos; ?>" placeholder="Nuevos objetos" required> 
             </div>
             <div class="form-group">
               <label>Inspector</label>
-              <input name="inspector" type="text" class="form-control" value="<?php echo $inspector; ?>" placeholder="Nueva acta" required> 
+              <input name="inspector" type="text" class="form-control" value="<?php echo $inspector; ?>" placeholder="Nuevo inspector" required> 
             </div>
             <div class="form-group">
               <label>Legajo</label>
-              <input name="legajo" type="text" class="form-control" value="<?php echo $legajo; ?>" placeholder="Nueva acta" required> 
+              <input name="legajo" type="text" class="form-control"  maxlength="20" value="<?php echo $legajo; ?>" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Nuevo legajo" required> 
             </div>
             <div class="form-group">
               <label>Observaciones</label>
-              <input name="observaciones" type="text" class="form-control" value="<?php echo $observaciones; ?>" placeholder="Nueva acta" required> 
+              <input name="observaciones" type="text" class="form-control" value="<?php echo $observaciones; ?>" placeholder="Nueva observacion" required> 
             </div>
             <div class="form-group">
               <label>Estado</label>
-              <input name="estado" type="text" class="form-control" value="<?php echo $estado; ?>" placeholder="Nueva acta" required> 
+              <input name="estado" type="text" class="form-control" value="<?php echo $estado; ?>" placeholder="Nuevo estado" required> 
             </div>
               
         </li>

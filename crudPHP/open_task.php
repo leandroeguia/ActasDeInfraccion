@@ -1,4 +1,5 @@
 <?php
+
 include("db.php");
 
 if  (isset($_GET['id'])) {
@@ -13,5 +14,5 @@ if  (isset($_GET['id'])) {
 
 
 ?>
-
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <img src="<?php echo $row["img_dir"]; ?>"  class="img-thumbnail" />

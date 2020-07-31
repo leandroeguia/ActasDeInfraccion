@@ -5,6 +5,7 @@
 <main class="container p-4">
 <head>
 <link rel="stylesheet" href="estilos.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
   <div class="row">
 

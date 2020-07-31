@@ -17,6 +17,7 @@ if  (isset($_GET['submitear'])) {
 
 
 <main class="container p-4">
+<link href="css/bootstrap.min.css" rel="stylesheet">
             <div class="row">
                 <table class="table table-bordered">
                 <thead>
@@ -65,6 +66,7 @@ if  (isset($_GET['submitear'])) {
         <?php
     }else{
         ?>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <h1>No se encontraron resultados</h1>
         <?php
         die("No existe el acta ingresada!");

@@ -5,6 +5,7 @@
 <main class="container p-4">
 <head>
 <link rel="stylesheet" href="estilos.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 
   
@@ -18,6 +19,7 @@
             <th>Acta</th>
             <th>Comprobación</th>
             <th>Legajo</th>
+            <th>Fecha</th>
             <th>Imagen</th>
             <th>Acciones</th>
           </tr>
@@ -35,6 +37,7 @@
             <td><?php echo $row['acta']; ?></td>
             <td><?php echo $row['actaComp']; ?></td>
             <td><?php echo $row['legajo']; ?></td>
+            <td><?php echo $row['fecha']; ?></td>
             <td> <img src="<?php echo $row["img_dir"]; ?>" height="70" width="70" class="img-thumbnail" /> </td>
             <td>
               <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary" data-toggle="tooltip" title="Editar">

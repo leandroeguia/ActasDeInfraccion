@@ -1,4 +1,4 @@
-# Descripción
+# Screenshot
 ![](docs/screenshot.png)
 
 
